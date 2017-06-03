@@ -1,7 +1,7 @@
 doctype html
 html
   head
-    title Welcome to So Wow!
+    title #{title}: Welcome to So Wow!
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='viewport', content='width=device-width, initial-scale=1')
@@ -19,11 +19,11 @@ html
           a.navbar-brand(href='#') So Wow Inc.
         #navbar.collapse.navbar-collapse
           ul.nav.navbar-nav.navbar-right
-            li.active
+            li(class=(title === 'Home' ? 'active' : ''))
               a(href='#') Home
-            li
+            li(class=(title === 'About' ? 'active' : ''))
               a(href='/about') About
-            li
+            li(class=(title === 'Contact' ? 'active' : ''))
               a(href='/contact') Contact
 
     block content
